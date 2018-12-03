@@ -1,0 +1,29 @@
+.footer {
+  background: $secondary_color;
+  line-height: 30px;
+  color: #fff;
+  hr{
+   border-top: 1px solid #555;
+  }
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    li {
+      line-height: 30px;
+      a {
+        color: #ddd;
+      }
+    }
+  }
+  .footer-logo{
+    -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+    filter: grayscale(100%);
+    width: 50%;
+    float: left;
+  }
+}
+.footer-copy{
+  background: #223042;
+  color: #fff;
+}

@@ -1,0 +1,45 @@
+﻿/*
+Theme Name: Base Template
+Theme URI: https://tebta.com
+Author: Mohammad Abdi
+Author URI: https://mabdi.ir
+Description: Tebta Company is present
+Version: 1.0.0
+Text Domain: tebta
+*/
+@font-face {
+  font-family: 'samim';
+  src: url('assets/fonts/Samim.eot');
+  src: url('assets/fonts/Samim.eot?#iefix') format('embedded-opentype'),
+  url('assets/fonts/Samim.woff2') format('woff2'),
+  url('assets/fonts/Samim.woff') format('woff'),
+  url('assets/fonts/Samim.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'shabnam';  
+  src: url('assets/fonts/Shabnam.eot');
+  src: url('assets/fonts/Shabnam.eot?#iefix') format('embedded-opentype'),
+  url('assets/fonts/Shabnam.woff2') format('woff2'),
+  url('assets/fonts/Shabnam.woff') format('woff'),
+  url('assets/fonts/Shabnam.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+$fontfa : 'samim';
+$fonth:'shabnam';
+$primary_color:#00AA88;
+$secondary_color: #2e3e52;
+@import "assets/scss/header";
+@import "assets/scss/footer";
+@import "assets/scss/general";
+@import "assets/scss/innerpages";
+@import "assets/scss/home";
+@import "assets/scss/media-lg";
+@import "assets/scss/media-md";
+@import "assets/scss/media-sm";
+@import "assets/scss/media-xs";
+@import "assets/scss/media-custom";
+@import "assets/scss/woocommerce";

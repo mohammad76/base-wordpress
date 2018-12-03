@@ -1,0 +1,201 @@
+
+
+//colors
+$color_bon_jour_approx: #dfdfdf;
+$concrete: #f2f2f2;
+$color_alabaster_38_approx: rgba(249,249,249,0.38);
+$color_alto_16_approx: rgba(220,220,220,0.16);
+$color_electric_violet_approx: #c000ff;
+$mercury: #e5e5e5;
+$color_chicago_approx: #5a5a5a;
+$white: #fff;
+$color_silver_chalice_approx: #ababab;
+$color_alabaster_approx: rgba(252,252,252,1);
+$color_green_approx: #00de07;
+$color_alto_approx: #dcdcdc;
+$color_alto_13_approx: rgba(220,220,220,0.13);
+$black_11: rgba(0,0,0,0.11);
+
+//fonts
+$font_0: georgia;
+$font_1: times;
+$font_2: serif;
+
+.comment-notes {
+  display: none;
+}
+.comment-form-url {
+  display: none;
+}
+.comment-body {
+  padding: 10px;
+  border: 1px solid $concrete;
+  background: $color_alabaster_38_approx;
+  //Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+  box-shadow: 0 0 2px 2px $color_alto_16_approx;
+  border-right: 3px solid $color_electric_violet_approx;
+  margin-bottom: 10px;
+}
+#respond {
+  border-top: 1px dashed $color_bon_jour_approx;
+  padding-top: 25px;
+  margin-top: 30px;
+}
+#commentform {
+  margin-top: 20px;
+  p {
+    margin-bottom: 10px;
+  }
+  textarea {
+    outline: 0!important;
+    width: 100%;
+    border: 1px solid $color_alto_approx;
+    //Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+    box-shadow: inset 2px 2px 3px $color_alto_13_approx;
+    padding: 5px;
+  }
+  #submit {
+    font-size: 15px;
+    padding: 15px !important;
+    width: 50%;
+    line-height: 1.42857143;
+    color: $white !important;
+    border: 1px solid transparent;
+    //Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+    border-radius: 4px;
+    background: $primary_color !important;
+    //Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+    box-shadow: inset 0 -3px $black_11;
+    outline: 0!important;
+    text-align: center;
+    margin: 0 auto;
+    margin-top: 25px;
+    display: inline-block;
+  }
+  input {
+    outline: 0!important;
+    width: 100%;
+    border: 1px solid $color_alto_approx;
+    //Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+    box-shadow: inset 2px 2px 3px $color_alto_13_approx;
+    padding: 11px 5px;
+    font-size: 11px;
+    line-height: 11px;
+    position: relative;
+    top: -1px;
+    padding-top: 12px;
+  }
+}
+.form-submit {
+  text-align: center;
+}
+h3#comments {
+display: none;
+}
+.comment-form-comment label {
+  display: none;
+}
+ol.commentlist {
+  list-style: none;
+  padding: 15px 0 0;
+  border-top: 1px dashed $color_bon_jour_approx;
+  text-indent: 0;
+  li.comment {
+    div {
+      &.vcard {
+        font: normal 16px $font_0, $font_1, $font_2;
+        margin-bottom: 7px;
+        padding-bottom: 5px;
+        border-bottom: 1px dashed $mercury;
+        cite.fn {
+          font-style: normal;
+        }
+        span.says {
+          display: none;
+        }
+      }
+      &.comment-meta {
+        font-size: 10px;
+        float: left;
+        a {
+          color: $color_chicago_approx;
+          position: relative;
+          top: -30px;
+        }
+      }
+      &.reply {
+        font-size: 11px;
+        text-align: left;
+        a {
+          font-weight: 400;
+          padding: 5px 10px;
+          display: inline-block;
+          padding-top: 2px;
+          color: $white;
+          background-color: $color_silver_chalice_approx;
+          //Instead of the line below you could use @include border-top-right-radius($radius)
+          border-top-right-radius: 3px;
+          //Instead of the line below you could use @include border-bottom-right-radius($radius)
+          border-bottom-right-radius: 3px;
+          margin-left: -10px;
+          //Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+          transition: all .2s;
+        }
+      }
+    }
+    p {
+      font-size: 12px;
+      margin: 0 0 1em;
+      line-height: 25px;
+    }
+    ul {
+      font-size: 11px;
+      list-style: square;
+      margin: 0 0 1em 2em;
+      &.children {
+        list-style: none;
+        margin: 1em 0 0;
+        text-indent: 0;
+        li {
+          &.depth-2 {
+            margin-right: 0;
+          }
+          &.depth-3 {
+            margin-right: 0;
+          }
+          &.depth-4 {
+            margin-left: 0;
+          }
+          &.depth-5 {
+            margin-left: 0;
+          }
+        }
+        .comment-body {
+          background-color: $color_alabaster_approx;
+          border-right: 3px solid $color_green_approx;
+          border-left: 1px solid $concrete!important;
+        }
+      }
+    }
+  }
+}
+textarea#comment {
+  max-width: 100%;
+  border: 1px solid $color_alto_approx;
+}
+
+.wp-pagenavi {
+  span,  .page , .nextpostslink , .previouspostslink {
+    border: 1px solid #fff;
+    float: right;
+    border-radius: 20px;
+    padding: 5px 15px;
+    margin-left: 10px;
+  }
+  .current{
+    background: #555;
+  }
+  a{
+    color: #fff;
+  }
+}
