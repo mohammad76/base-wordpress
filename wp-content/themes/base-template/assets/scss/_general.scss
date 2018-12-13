@@ -1,14 +1,10 @@
-
-
-
 body {
   background: #FAFAFA;
   font-family: $fontfa;
   font-size: 14px;
   line-height: 1.5em;
-color: #444;
+  color: #444;
 }
-
 
 img {
   max-width: 100%;
@@ -70,11 +66,13 @@ h6, .h6 {
 p {
   margin-bottom: 0;
 }
-.carousel-item{
-  img{
+
+.carousel-item {
+  img {
     width: 100%;
   }
 }
+
 .bg-primary {
   background-color: $primary_color !important;
 }
@@ -103,10 +101,12 @@ p {
   background: $primary_color !important;
   border: none;
 }
-.bg-dark{
+
+.bg-dark {
   background: #333 !important;
 
 }
+
 .navigation {
   li {
     display: inline;
@@ -132,30 +132,34 @@ p {
   margin: 5px;
 
 }
+
 .row.d-flex {
   height: 100vw;
   max-height: calc(100vh * 2);
 }
 
-.line-height-30{
+.line-height-30 {
   line-height: 30px !important;
 }
-.imgs-margin{
-  img{    
+
+.images-margin {
+  img {
     margin: 15px auto;
   }
 }
-.btnmore{
+
+.btnmore {
   color: $primary_color;
   border: 1px solid $primary_color;
   padding: 4px 20px;
   border-radius: 15px;
-  &:hover{
-background: $primary_color;
+  &:hover {
+    background: $primary_color;
     color: #fff;
   }
 }
-input,textarea,select{
+
+input, textarea, select {
   background: #fff;
   border: 1px solid #ddd;
   border-radius: 3px;
@@ -174,7 +178,7 @@ input,textarea,select{
   display: inline-block;
   font-size: 17px;
   transition-duration: .3s;
-  &:hover{
+  &:hover {
     background: $primary_color;
     color: #fff;
   }
