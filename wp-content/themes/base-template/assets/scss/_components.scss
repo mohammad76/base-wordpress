@@ -1,0 +1,56 @@
+.icon-box{
+  border-radius: 3px;
+  i{
+    width: 100px;
+    height: 100px;
+    line-height: 102px;
+    text-align: center;
+    font-size: 30px;
+    margin-bottom: 10px;
+  }
+  h5{
+    font-size: 16px;
+    font-weight: 900;
+  }
+  .text-justify{
+    font-size: 14px;
+    color: #777;
+  }
+}
+.icon-box-one{
+  i{
+    color: $primary_color;
+    border: 1px solid $primary_color;
+  }
+}
+
+.icon-box-two{
+  i{
+    background: $primary_color;
+    color: #fff;
+  }
+}
+
+.icon-box-three{
+  i{
+    color: $primary_color;
+    font-size: 60px;
+  }
+}
+
+.icon-box-four{
+  margin-top: 20px;
+  position: relative;
+  i{
+    background: $primary_color;
+    color: #fff;
+    position: absolute;
+    top: -50px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  h5{
+    font-size: 16px;
+    margin-top: 20px;
+  }
+}

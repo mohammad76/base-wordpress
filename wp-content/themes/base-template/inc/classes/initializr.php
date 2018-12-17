@@ -5,7 +5,7 @@ class initializr {
 		add_theme_support( 'title-tag' );
 		add_theme_support( 'post-thumbnails' );
 		register_nav_menus( [
-			'primary_menu' => __( 'Primary Menu', 'tebta' ),
+			'primary_menu' => __( 'منو اصلی', 'tebta' ),
 		] );
 
 		if ( function_exists( 'acf_add_options_page' ) ) {

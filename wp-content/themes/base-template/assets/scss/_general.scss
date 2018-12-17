@@ -183,3 +183,12 @@ input, textarea, select {
     color: #fff;
   }
 }
+
+.menu-not-exist{
+  background: $secondary_color;
+  padding: 10px;
+  text-align: center;
+  width: 100%;
+  color: #fff;
+  border-radius: 3px;
+}
