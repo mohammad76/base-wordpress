@@ -1,5 +1,11 @@
 <?php
 
-// include ajax handlers here\
+// include ajax handlers here
 
-include 'get_site_info.php';
+$files = scandir(get_template_directory().'/inc/ajax-requests');
+
+foreach ($files as $file){
+		if(stripos($file ,'.php') && $file != 'index.php'){
+			include get_template_directory().'/inc/ajax-requests/' .  $file;
+		}
+}

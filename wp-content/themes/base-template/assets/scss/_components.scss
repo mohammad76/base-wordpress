@@ -54,3 +54,19 @@
     margin-top: 20px;
   }
 }
+
+.login-box , .register-box{
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 3px;
+  padding: 20px;
+  margin: 10px;
+  label{
+    font-family: $fonth;
+  }
+  .btn{
+    width: 100%;
+    margin-bottom: 5px;
+    font-family: $fonth;
+  }
+}

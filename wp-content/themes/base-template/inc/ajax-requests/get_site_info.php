@@ -1,6 +1,7 @@
 <?php
 // this is a sample of ajax handler
 function get_site_info(){
+	check_ajax_referer('ajax-request');
 	$info = [
 		'title' => get_bloginfo('name'),
 		'site' => get_bloginfo('url'),
