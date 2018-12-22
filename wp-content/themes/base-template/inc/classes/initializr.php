@@ -2,10 +2,14 @@
 
 class initializr {
 	public static function setup() {
+		load_theme_textdomain( 'kaprina', get_template_directory() . '/languages' );
+
 		add_theme_support( 'title-tag' );
 		add_theme_support( 'post-thumbnails' );
+
+
 		register_nav_menus( [
-			'primary_menu' => __( 'منو اصلی', 'tebta' ),
+			'primary_menu' => __( 'Primary Menu', 'kaprina' ),
 		] );
 
 		if ( function_exists( 'acf_add_options_page' ) ) {
@@ -27,15 +31,15 @@ class initializr {
 		}
 
 		function custom_dashboard_help() {
-			echo '<p>از شما متشکریم که ما را انتخاب کردید. برای ارسال ایمیل از <a href="mailto:support@tebta.com">اینجا</a> اقدام کنید. همواره می توانید برای پشتیبانی و ارتباط با از <a href="http://web.tebta.com/" target="_blank">وبسایت ما</a> اقدام کنید.</p>';
+			echo '<p>از شما متشکریم که ما را انتخاب کردید. برای ارسال ایمیل از <a href="mailto:support@kaprinaco.com">اینجا</a> اقدام کنید. همواره می توانید برای پشتیبانی و ارتباط با از <a href="http://kaprinaco.com/" target="_blank">وبسایت ما</a> اقدام کنید.</p>';
 		}
 
 		// add our company link to wordpress toolbar
 		function company_link( $wp_admin_bar ) {
 			$args = array(
 				'id'    => 'company_link',
-				'title' => 'مرکز فناوری تبتا',
-				'href'  => 'http://tebta.com',
+				'title' => 'مرکز فناوری کاپرینا',
+				'href'  => 'http://kaprinaco.com',
 				'meta'  => array(
 					'class' => 'company_link',
 					'title' => 'طراحی سایت ، سئو و بهینه سازی'
@@ -84,10 +88,6 @@ class initializr {
 
 	public static function fb_disable_feed() {
 		wp_die( __( 'No feed available,please visit our <a href="' . get_bloginfo( 'url' ) . '">homepage</a>!' ) );
-	}
-
-	public static function disable_rest_api() {
-		die( 'REST API is disabled.' );
 	}
 
 }

@@ -13,10 +13,10 @@
 	</div>
 	<a class="carousel-control-prev" href="#carouselIndicators" role="button" data-slide="prev">
 		<span class="carousel-control-prev-icon" aria-hidden="true"></span>
-		<span class="sr-only">قبلی</span>
+		<span class="sr-only"><?= __('Previous' , 'kaprina') ?></span>
 	</a>
 	<a class="carousel-control-next" href="#carouselIndicators" role="button" data-slide="next">
 		<span class="carousel-control-next-icon" aria-hidden="true"></span>
-		<span class="sr-only">بعدی</span>
+		<span class="sr-only"><?= __('Next' , 'kaprina') ?></span>
 	</a>
 </div>

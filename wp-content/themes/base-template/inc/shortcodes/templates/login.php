@@ -11,21 +11,21 @@ if ( is_user_logged_in() ) {
 <div class="login-box">
     <form action="<?php the_permalink() ?>">
         <div class="form-group">
-            <label for="email">ایمیل:</label>
-            <input type="email" placeholder="ایمیل خود را وارد کنید ..." class="form-control" id="username">
+            <label for="username"><?php _e('Email','kaprina') ?>:</label>
+            <input type="text" placeholder="<?php _e('Please Enter Your Email','kaprina') ?> ..." class="form-control" id="username">
         </div>
         <div class="form-group">
-            <label for="pwd">رمز عبور:</label>
-            <input type="password" placeholder="رمز عبور خود را وارد کنید ..." class="form-control" id="password">
+            <label for="password"><?php _e('Password','kaprina') ?>:</label>
+            <input type="password" placeholder="<?php _e('Please Enter Your Password','kaprina') ?> ..." class="form-control" id="password">
         </div>
         <div class="form-group form-check">
             <label class="form-check-label">
-                <input class="form-check-input" id="remember" type="checkbox"> مرا بخاطر بسپار
+                <input class="form-check-input" id="remember" type="checkbox"> <?php _e('Remember Me','kaprina'); ?>
             </label>
         </div>
         <div class="alert"></div>
-        <button type="submit" id="login-btn" class="btn btn-primary">ورود</button>
-        <a href="<?= home_url('/register') ?>" class="btn btn-secondary">ثبت نام</a>
+        <button type="submit" id="login-btn" class="btn btn-primary"><?php _e('Login','kaprina'); ?></button>
+        <a href="<?= home_url('/register') ?>" class="btn btn-secondary"><?php _e('Register','kaprina'); ?></a>
     </form>
 </div>
 

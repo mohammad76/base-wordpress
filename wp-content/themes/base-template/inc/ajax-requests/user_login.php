@@ -3,7 +3,7 @@
 function user_login() {
 	$response = [
 		'success' => false,
-		'message' => 'درحال حاضر مشکلی بیش آمده است.'
+		'message' => __('Something Wrong','kaprina')
 	];
 
 
@@ -14,7 +14,7 @@ function user_login() {
 		'remember' =>  $_POST['remember'],
 	];
 	if ( empty( $credentials['user_login'] ) || empty( $credentials['user_password'] ) ) {
-		$response['message'] = 'لطفا فیلد ها را تکمیل کنید';
+		$response['message'] = __('Please Complete All Fields.' ,'kaprina');
 		wp_send_json($response);
 	}
 	if ( !empty($credentials['remember']) )
@@ -26,12 +26,12 @@ function user_login() {
 	$user = wp_signon( $credentials, false );
 
 	if ( is_wp_error( $user ) ) {
-		$response['message'] = 'اطلاعات وارد شده صحیح نمی باشد.';
+		$response['message'] = __('Username or Password not Correct.' ,'kaprina');
 		wp_send_json($response);
 	}
 
 
-	$response['message'] = 'ورود به سایت با موفقیت انجام شد.';
+	$response['message'] = __('Login successfully.' ,'kaprina');
 	$response['success'] = true;
 	wp_send_json($response);
 }

@@ -70,3 +70,82 @@
     font-family: $fonth;
   }
 }
+
+.profile-section{
+  .nav-pills{
+    background: #eeeeee;
+    border-radius: 3px;
+    overflow: hidden;
+    a{
+      color: #888;
+      border-bottom: 1px solid #ddd;
+      font-family: $fonth;
+      font-size: 15px;
+      padding: 15px;
+      &:hover{
+        background: #ddd;
+      }
+      &.active{
+        background: $primary_color;
+        border-radius: 0;
+      }
+    }
+  }
+  .box-profile{
+    background: #fff;
+    border: 1px solid #ddd;
+    padding: 20px;
+    border-radius: 3px;
+    .title-profile{
+      margin: -20px;
+      background: #e2e2e2;
+      font-size: 1.1em;
+      padding: 15px 0;
+      font-weight: 500;
+      text-align: center;
+      margin-bottom: 25px;
+      h3{
+        margin-bottom: 0;
+      }
+    }
+  }
+  .user-panel-home{
+    ul{
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      display: block;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      li{
+        padding: 20px;
+        border-bottom: 1px solid #ddd;
+      }
+    }
+  }
+  .user-panel-comments{
+    ul{
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      li{
+        padding: 20px 0;
+        border-bottom: 1px solid #ddd;
+        .comment-bubble{
+          background: #fff;
+          border: 1px solid #ddd;
+          padding: 20px;
+          border-radius: 5px;
+          font-size: 13px;
+        }
+      }
+    }
+  }
+  .user-panel-change{
+    label{
+      font-family: $fonth;
+      font-weight: 700;
+      color: #6c757d!important;
+    }
+  }
+}

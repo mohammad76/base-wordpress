@@ -17,7 +17,7 @@
 			if (!empty($menu)) {
 				echo $menu;
 			} else {
-				echo "<div class='menu-not-exist'>منو انتخاب نشده است !!!</div>";
+				echo "<div class='menu-not-exist'> " . _e('Menu not Selected','kaprina') . " !!!</div>";
 			}
 			?>
 		</div>

@@ -3,7 +3,7 @@
 function user_register() {
 	$response = [
 		'success' => false,
-		'message' => 'درحال حاضر مشکلی بیش آمده است.'
+		'message' => __('Something Wrong','kaprina')
 	];
 	check_ajax_referer( 'ajax-request', 'nonce' );
 	$data = [
@@ -13,30 +13,30 @@ function user_register() {
 		'repassword' =>  sanitize_text_field( $_POST['repassword']),
 	];
 	if ( empty( $data['username'] ) || empty( $data['email'] ) || empty( $data['password'] ) || empty( $data['repassword'] ) ) {
-		$response['message'] = 'لطفا فیلد ها را تکمیل کنید';
+		$response['message'] = __('Please Complete All Fields.' ,'kaprina');
 		wp_send_json($response);
 	}
 	if(username_exists($data['username'])){
-		$response['message'] = 'لطفا نام کاربری دیگری انتخاب کنید.';
+		$response['message'] = __('Please Enter Another Username.','kaprina');
 		wp_send_json($response);
 	}
 	if(!filter_var($data['email'] , FILTER_VALIDATE_EMAIL)){
-		$response['message'] = 'لطفا یک ایمیل معتبر وارد کنید.';
+		$response['message'] = __('Please Enter Valid Email.','kaprina');
 		wp_send_json($response);
 	}
 	if($data['password'] != $data['repassword']){
-		$response['message'] = 'تکرار کلمه عبور یکسان نیست.';
+		$response['message'] = __('Passwords Not Equal.','kaprina');
 		wp_send_json($response);
 	}
 	$user = wp_create_user( $data['username'], $data['password'] , $data['email'] );
 
 	if ( is_wp_error( $user ) ) {
-		$response['message'] = 'شما قبلا ثبت نام کرده اید.';
+		$response['message'] = __('You are Already Registered.','kaprina');
 		wp_send_json($response);
 	}
 
 
-	$response['message'] = 'عضویت با موفقیت انجام شد.';
+	$response['message'] = __('Sign up successfully.','kaprina');
 	$response['success'] = true;
 	wp_send_json($response);
 }

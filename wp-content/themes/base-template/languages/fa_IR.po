@@ -1,0 +1,166 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Base Template\n"
+"POT-Creation-Date: 2018-12-22 14:19+0330\n"
+"PO-Revision-Date: 2018-12-22 14:24+0330\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: fa_IR\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 2.2\n"
+"X-Poedit-Basepath: ..\n"
+"Plural-Forms: nplurals=2; plural=(n==0 || n==1);\n"
+"X-Poedit-Flags-xgettext: --add-comments=translators:\n"
+"X-Poedit-WPHeader: style.css\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
+"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;"
+"_n_noop:1,2;_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: *.js\n"
+
+#: components/navbar.php:20
+msgid "Menu not Selected"
+msgstr "هیج منویی انتخاب نشده است"
+
+#: components/search-form.php:3
+msgid "Search"
+msgstr "جستجو"
+
+#: components/slider.php:16
+msgid "Previous"
+msgstr "قبلی"
+
+#: components/slider.php:20
+msgid "Next"
+msgstr "بعدی"
+
+#: inc/ajax-requests/user_change_password.php:5
+#: inc/ajax-requests/user_login.php:6 inc/ajax-requests/user_register.php:6
+#: inc/ajax-requests/user_update.php:5
+msgid "Something Wrong"
+msgstr "مشکلی به وجود آمده است"
+
+#: inc/ajax-requests/user_change_password.php:13
+#: inc/ajax-requests/user_login.php:17 inc/ajax-requests/user_register.php:16
+msgid "Please Complete All Fields."
+msgstr "لطفا تمام فیلد ها را تکمیل فرمایید."
+
+#: inc/ajax-requests/user_change_password.php:17
+#: inc/ajax-requests/user_register.php:28
+msgid "Passwords Not Equal."
+msgstr "تکرار رمز عبور یکسان نیست."
+
+#: inc/ajax-requests/user_change_password.php:22
+msgid "Password change successfully."
+msgstr "رمز عبور با موفقیت تغییر کرد."
+
+#: inc/ajax-requests/user_login.php:29
+msgid "Username or Password not Correct."
+msgstr "نام کاربری یا رمز عبور اشتباه می باشد."
+
+#: inc/ajax-requests/user_login.php:34
+msgid "Login successfully."
+msgstr "ورود با موفقیت انجام شد."
+
+#: inc/ajax-requests/user_register.php:20
+msgid "Please Enter Another Username."
+msgstr "لطفا نام کاربری دیگری انتخاب کنید."
+
+#: inc/ajax-requests/user_register.php:24
+msgid "Please Enter Valid Email."
+msgstr "لطفا ایمیل معتبری وارد کنید."
+
+#: inc/ajax-requests/user_register.php:34
+msgid "You are Already Registered."
+msgstr "شما قبلا ثبت نام کرده اید."
+
+#: inc/ajax-requests/user_register.php:39
+msgid "Sign up successfully."
+msgstr "ثبت نام با موفقیت انجام شد."
+
+#: inc/ajax-requests/user_update.php:23
+msgid "Update Problem"
+msgstr "مشکلی در ویرایش رخ داده است."
+
+#: inc/ajax-requests/user_update.php:26
+msgid "Update completed successfully."
+msgstr "ویرایش با موفقیت انجام شد."
+
+#: inc/classes/initializr.php:12
+msgid "Primary Menu"
+msgstr "منو اصلی"
+
+#: inc/classes/initializr.php:90
+msgid "No feed available,please visit our <a href=\""
+msgstr ""
+
+#: inc/shortcodes/templates/login.php:14
+msgid "Email"
+msgstr "ایمیل"
+
+#: inc/shortcodes/templates/login.php:15
+msgid "Please Enter Your Email"
+msgstr "لطفا ایمیل خود را وارد کنید"
+
+#: inc/shortcodes/templates/login.php:18
+msgid "Password"
+msgstr "رمز عبور"
+
+#: inc/shortcodes/templates/login.php:19
+msgid "Please Enter Your Password"
+msgstr "لطفا رمز عبور خود را وارد کنید"
+
+#: inc/shortcodes/templates/login.php:23
+msgid "Remember Me"
+msgstr "مرا به خاطر بسپار"
+
+#: inc/shortcodes/templates/login.php:27
+msgid "Login"
+msgstr "ورود"
+
+#: inc/shortcodes/templates/login.php:28
+msgid "Register"
+msgstr "ثبت نام"
+
+#: inc/shortcodes/templates/profile.php:19
+msgid "User Profile"
+msgstr "مشخصات کاربری"
+
+#: inc/shortcodes/templates/profile.php:20
+msgid "Edit information"
+msgstr "ویرایش اطلاعات"
+
+#: inc/shortcodes/templates/profile.php:21
+msgid "Change Password"
+msgstr "تغییر رمز عبور"
+
+#: inc/shortcodes/templates/profile.php:22
+msgid "Comments"
+msgstr "نظرات"
+
+#: inc/shortcodes/templates/profile.php:28
+msgid "Your Profile"
+msgstr "پروفایل شما"
+
+#. Theme Name of the plugin/theme
+msgid "Base Template"
+msgstr ""
+
+#. Theme URI of the plugin/theme
+msgid "https://kaprinaco.com"
+msgstr ""
+
+#. Description of the plugin/theme
+msgid "kaprina Company is present"
+msgstr ""
+
+#. Author of the plugin/theme
+msgid "Mohammad Abdi"
+msgstr ""
+
+#. Author URI of the plugin/theme
+msgid "https://mabdi.ir"
+msgstr ""
