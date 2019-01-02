@@ -35,10 +35,11 @@ function get_excerpt($limit, $source = null){
 	$excerpt = $excerpt.'... ';
 	return $excerpt;
 }
-
-function dd($data){
-	echo '<pre>';
-	var_dump($data);
-	echo '</pre>';
-	die();
+if(!function_exists('dd')) {
+	function dd( $data ) {
+		echo '<pre>';
+		var_dump( $data );
+		echo '</pre>';
+		die();
+	}
 }
