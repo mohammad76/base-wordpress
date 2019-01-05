@@ -1,14 +1,15 @@
 <?php
 
-class Base_Admin_Pages{
+class Base_Admin_Pages {
 	public function __construct() {
+		do_action('base_plugin_add_setting_tab');
 		add_action( 'admin_menu', function () {
 			add_menu_page(
 				__( 'افزونه پیشفرض', 'kaprina' ),
 				'افزونه پیشفرض',
 				'manage_options',
 				'base_plugin',
-				[$this,'admin_setting_tabs'],
+				[ $this, 'admin_setting_tabs' ],
 				''
 			);
 			add_submenu_page(
@@ -20,31 +21,44 @@ class Base_Admin_Pages{
 			);
 		} );
 	}
+
 	public function get_setting_tabs() {
-		$tabs = array(
-			'main'   => __( 'تب اول', 'kaprina' ),
-			'setting' => __( 'تب دوم', 'kaprina' )
-		);
+		$tabs = apply_filters( 'base-admin-setting-tabs', array(
+			'main',
+			'maintwo'
+		) );
 
 		return $tabs;
 	}
-	public function page_tabs( $current = 'main' ) {
+
+	public function admin_setting_tabs() {
 		$tabs = $this->get_setting_tabs();
+		$current_tab = ( ! empty( $_GET['tab'] ) ) ? esc_attr( $_GET['tab'] ) : 'main';
+		if ( !in_array( $current_tab, $tabs ) ) {
+			echo 'error: tab not exist';
+			return;
+		}
 		$html = '<h2 class="nav-tab-wrapper">';
-		foreach ( $tabs as $tab => $name ) {
-			$class = ( $tab == $current ) ? 'nav-tab-active' : '';
-			$html  .= '<a class="nav-tab ' . $class . '" href="?page=base_plugin&tab=' . $tab . '">' . $name . '</a>';
+		$class_name = [];
+		foreach ( $tabs as $tab ) {
+			$class_name[$tab] = 'base_setting_tab_' . $tab;
+			if ( class_exists( $class_name[$tab] ) ) {
+				$instance_class = new  $class_name[$tab];
+				$class                         = ( $current_tab == $instance_class->get_name() ) ? 'nav-tab-active' : '';
+				$html                          .= '<a class="nav-tab ' . $class . '" href="?page=base_plugin&tab=' . $instance_class->get_name() . '">' . $instance_class->get_title() . '</a>';
+
+			}
 		}
 		$html .= '</h2>';
 		echo $html;
-	}
-	public function admin_setting_tabs(  ) {
-		$secure_tabs = $this->get_setting_tabs();
-		$tab         = ( ! empty( $_GET['tab'] ) ) ? esc_attr( $_GET['tab'] ) : 'main';
-		$this->page_tabs( $tab );
-		$path = PLUGIN_DIR_BP . '/templates/admin/admin-setting-tab-' . $tab . '.php';
-		if ( array_key_exists( $tab, $secure_tabs ) && is_readable( $path ) && file_exists( $path ) ) {
-			include $path;
+
+		if ( class_exists( $class_name[$current_tab] ) ) {
+			$instance_class = new  $class_name[$current_tab];
+			if(isset($_POST['submit'])){
+				$instance_class->save_setting();
+			}
+
+			$instance_class->get_body();
 		} else {
 			echo 'not found';
 		}

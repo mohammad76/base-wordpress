@@ -12,11 +12,11 @@
 
 
 defined( 'ABSPATH' ) || exit( '403 Access Denied' );
-include  plugin_dir_path( __FILE__ ) .'/helpers.php';
-final class Base {
+include plugin_dir_path( __FILE__ ) . '/helpers.php';
+
+final class Base_Plugin {
 
 	private static $instance;
-
 	public static function getInstance() {
 		if ( is_null( static::$instance ) ) {
 			static::$instance = new static();
@@ -28,21 +28,25 @@ final class Base {
 	private function __construct() {
 		$this->constants();
 		spl_autoload_register( [ $this, 'autoloader' ] );
-		register_activation_hook( PLUGIN_NAME_WITH_PATH_BP, [$this,'activation'] );
-		register_deactivation_hook( PLUGIN_NAME_WITH_PATH_BP,  [$this,'deactivation']);
-		if (is_admin()){
+		register_activation_hook( PLUGIN_NAME_WITH_PATH_BP, [ $this, 'activation' ] );
+		register_deactivation_hook( PLUGIN_NAME_WITH_PATH_BP, [ $this, 'deactivation' ] );
+
+		if ( is_admin() ) {
 			new Base_Admin_Pages();
-		}else{
+
+		} else {
 
 		}
 	}
 
 	public function activation() {
-		
+
 	}
+
 	public function deactivation() {
 
 	}
+
 	private function __clone() {
 	}
 
@@ -50,8 +54,8 @@ final class Base {
 	}
 
 	public function autoloader( $class ) {
-		$class_path = PLUGIN_CLASSES_DIR_BP . strtolower($class) . '.php';
-		if(file_exists($class_path) && is_readable($class_path)){
+		$class_path = PLUGIN_CLASSES_DIR_BP . strtolower( $class ) . '.php';
+		if ( file_exists( $class_path ) && is_readable( $class_path ) ) {
 			include $class_path;
 		}
 	}
@@ -68,4 +72,4 @@ final class Base {
 	}
 }
 
-Base::getInstance();
+Base_Plugin::getInstance();

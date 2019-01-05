@@ -330,7 +330,7 @@ class acf_form_customizer {
 			
 			// remove [acf] data from saved widget array
 			$id_data = $setting->id_data();
-			add_filter('pre_update_option_' . $id_data['base'], array($this, 'pre_update_option'), 10, 3);
+			add_filter('pre_update_option_' . $id_data['BasePlugin'], array($this, 'pre_update_option'), 10, 3);
 			
 		}
 		
