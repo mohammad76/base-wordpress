@@ -407,3 +407,48 @@ input, textarea, select {
   font-family: "shabnam";
   font-weight: 700;
   color: #6c757d !important; }
+
+.woocommerce #respond input#submit.alt, .woocommerce a.button.alt, .woocommerce button.button.alt, .woocommerce input.button.alt {
+  background-color: #00AA88;
+  color: #fff;
+  font-family: "shabnam";
+  font-weight: 400; }
+  .woocommerce #respond input#submit.alt:hover, .woocommerce a.button.alt:hover, .woocommerce button.button.alt:hover, .woocommerce input.button.alt:hover {
+    background-color: #2e3e52;
+    color: #fff; }
+
+#customer_details label {
+  width: 100%;
+  display: block; }
+
+#customer_details span.woocommerce-input-wrapper {
+  display: block;
+  width: 100%; }
+
+.woocommerce #content table.cart td.actions .input-text, .woocommerce table.cart td.actions .input-text, .woocommerce-page #content table.cart td.actions .input-text, .woocommerce-page table.cart td.actions .input-text {
+  width: 20em; }
+
+.woocommerce #respond input#submit, .woocommerce a.button, .woocommerce button.button, .woocommerce input.button {
+  background-color: #2e3e52;
+  color: #fff;
+  font-family: "shabnam";
+  font-weight: 400;
+  transition-duration: 0.3s; }
+
+.box-product {
+  padding: 20px;
+  border-radius: 0;
+  border: 1px solid #ebebeb;
+  transition-duration: 0.3s; }
+  .box-product:hover {
+    box-shadow: 0 2px 17px 0 rgba(0, 0, 0, 0.09);
+    z-index: 11; }
+  .box-product .card-title {
+    font-size: 15px;
+    margin-top: 20px; }
+    .box-product .card-title a {
+      color: #444; }
+  .box-product .price-box .price .woocommerce-Price-amount {
+    color: #46A349;
+    font-weight: bold;
+    font-family: "shabnam"; }
