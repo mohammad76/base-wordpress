@@ -23,4 +23,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 global $product;
 
 ?>
-<p class="price"><?php echo $product->get_price_html(); ?></p>
+<p class="price">
+    <span class="woocommerce-Price-amount">
+        قیمت:
+    </span> <?php echo $product->get_price_html(); ?>
+</p>

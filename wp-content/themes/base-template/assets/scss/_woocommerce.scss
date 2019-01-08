@@ -59,3 +59,31 @@
     }
   }
 }
+.price-section {
+  .woocommerce-Price-amount {
+    color: #46A349;
+    font-weight: bold;
+    font-family: $fonth;
+  }
+}
+
+.woocommerce #content div.product div.images, .woocommerce div.product div.images, .woocommerce-page #content div.product div.images, .woocommerce-page div.product div.images {
+  float: none;
+  width: 100%;
+}
+
+.woocommerce #content div.product div.summary, .woocommerce div.product div.summary, .woocommerce-page #content div.product div.summary, .woocommerce-page div.product div.summary {
+  float: none;
+  width: 100%;
+  clear: none;
+}
+
+.woocommerce div.product div.images .flex-control-thumbs li {
+  width: 24%;
+  float: right;
+  margin: 0;
+  list-style: none;
+  border: 1px solid #ddd;
+  padding: 5px;
+  margin-left: 5px;
+}

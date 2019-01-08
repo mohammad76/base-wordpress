@@ -85,7 +85,7 @@ body {
   background: #FAFAFA;
   font-family: "samim";
   font-size: 14px;
-  line-height: 1.5em;
+  line-height: 1.6em;
   color: #444; }
 
 img {
@@ -99,6 +99,18 @@ a {
   a:hover {
     color: inherit;
     text-decoration: none; }
+
+nav, ol, ul {
+  list-style: none; }
+
+abbr, address, article, aside, audio, b, blockquote, body, canvas, caption, cite, code, dd, del, details, dfn, div, dl, dt, em, fieldset, figcaption, figure, footer, form, h1, h2, h3, h4, h5, h6, header, hgroup, html, i, iframe, img, ins, kbd, label, legend, li, mark, menu, nav, object, ol, p, pre, q, samp, section, small, span, strong, sub, summary, sup, table, tbody, td, tfoot, th, thead, time, tr, ul, var, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent; }
 
 a.bg-primary:focus, a.bg-primary:hover, button.bg-primary:focus, button.bg-primary:hover {
   background: #00AA88 !important; }
@@ -233,6 +245,86 @@ input, textarea, select {
   color: #fff;
   border-radius: 3px; }
 
+.box-post-single {
+  padding: 30px;
+  background-color: #fff;
+  box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.1);
+  border-radius: 3px;
+  line-height: 32px;
+  text-align: justify;
+  color: #6b7074;
+  margin-bottom: 15px; }
+  .box-post-single img {
+    opacity: 0.9;
+    transition-duration: 0.3s;
+    border-radius: 3px; }
+    .box-post-single img:hover {
+      opacity: 1; }
+  .box-post-single p {
+    margin: 32px 0; }
+  .box-post-single h2 {
+    font-size: 1.2rem;
+    font-weight: 800;
+    line-height: 1.5rem;
+    padding: 15px 0; }
+  .box-post-single h3 {
+    font-size: 1.1rem;
+    font-weight: 700;
+    line-height: 1.5rem;
+    padding: 10px 0; }
+  .box-post-single .title-box-post-single {
+    color: #6b7074;
+    border-bottom: 1px solid #e1e0e0; }
+    .box-post-single .title-box-post-single h1 {
+      font-size: 20px;
+      font-weight: 700;
+      line-height: 2.2;
+      max-width: 70%;
+      margin-top: -10px; }
+
+.box-sidebar {
+  background-color: #fff;
+  box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.1);
+  border-radius: 3px;
+  line-height: 32px;
+  margin-bottom: 15px;
+  padding: 20px; }
+  .box-sidebar .title-box-sidebar {
+    padding: 0px 0 30px;
+    font-size: 15px;
+    position: relative;
+    text-align: center;
+    font-family: "shabnam";
+    font-weight: 700;
+    color: #6b7074; }
+    .box-sidebar .title-box-sidebar:before {
+      content: "";
+      display: block;
+      width: 45px;
+      height: 1px;
+      background-color: #63d0df;
+      position: absolute;
+      bottom: 23px;
+      left: 50%;
+      -webkit-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+      transform: translateX(-50%); }
+  .box-sidebar .related-posts-item {
+    min-height: 110px;
+    border-right: 5px solid transparent;
+    cursor: pointer;
+    display: block; }
+    .box-sidebar .related-posts-item a {
+      color: #6b7074;
+      font-size: 13px;
+      line-height: 22px; }
+    .box-sidebar .related-posts-item img {
+      border-radius: 50%;
+      padding-left: 7px; }
+    .box-sidebar .related-posts-item .detail-wrapper-time {
+      color: #afb6bc;
+      font-size: 12px; }
+
 @media (min-width: 992px) {
   #wp-menu {
     width: 100%;
@@ -290,6 +382,10 @@ input, textarea, select {
       position: absolute;
       top: 3px;
       left: -20px !important; } }
+
+@media only screen and (min-width: 1330px) {
+  .container {
+    max-width: 1300px; } }
 
 .icon-box {
   border-radius: 3px; }
@@ -452,3 +548,26 @@ input, textarea, select {
     color: #46A349;
     font-weight: bold;
     font-family: "shabnam"; }
+
+.price-section .woocommerce-Price-amount {
+  color: #46A349;
+  font-weight: bold;
+  font-family: "shabnam"; }
+
+.woocommerce #content div.product div.images, .woocommerce div.product div.images, .woocommerce-page #content div.product div.images, .woocommerce-page div.product div.images {
+  float: none;
+  width: 100%; }
+
+.woocommerce #content div.product div.summary, .woocommerce div.product div.summary, .woocommerce-page #content div.product div.summary, .woocommerce-page div.product div.summary {
+  float: none;
+  width: 100%;
+  clear: none; }
+
+.woocommerce div.product div.images .flex-control-thumbs li {
+  width: 24%;
+  float: right;
+  margin: 0;
+  list-style: none;
+  border: 1px solid #ddd;
+  padding: 5px;
+  margin-left: 5px; }

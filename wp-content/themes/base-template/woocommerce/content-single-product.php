@@ -26,12 +26,13 @@ do_action( 'woocommerce_before_single_product' );
 
 if ( post_password_required() ) {
 	echo get_the_password_form(); // WPCS: XSS ok.
+
 	return;
 }
 ?>
-<div id="product-<?php the_ID(); ?>" <?php wc_product_class(); ?>>
-
-	<?php
+<div id="product-<?php the_ID(); ?>" <?php wc_product_class( 'row' ); ?>>
+    <div class="col-12 col-md">
+		<?php
 		/**
 		 * Hook: woocommerce_before_single_product_summary.
 		 *
@@ -39,10 +40,19 @@ if ( post_password_required() ) {
 		 * @hooked woocommerce_show_product_images - 20
 		 */
 		do_action( 'woocommerce_before_single_product_summary' );
-	?>
-
-	<div class="summary entry-summary">
-		<?php
+		?>
+    </div>
+    <div class="col-12 col-md-8">
+        <div class="summary entry-summary">
+			<?php woocommerce_template_single_title() ?>
+            <div class="text-justify line-height-30">
+				<?php woocommerce_template_single_excerpt() ?>
+            </div>
+            <div class="price-section py-4">
+				<?php woocommerce_template_single_price() ?>
+            </div>
+			<?php woocommerce_template_single_add_to_cart() ?>
+			<?php
 			/**
 			 * Hook: woocommerce_single_product_summary.
 			 *
@@ -55,19 +65,19 @@ if ( post_password_required() ) {
 			 * @hooked woocommerce_template_single_sharing - 50
 			 * @hooked WC_Structured_Data::generate_product_data() - 60
 			 */
-			do_action( 'woocommerce_single_product_summary' );
-		?>
-	</div>
 
+			?>
+        </div>
+    </div>
 	<?php
-		/**
-		 * Hook: woocommerce_after_single_product_summary.
-		 *
-		 * @hooked woocommerce_output_product_data_tabs - 10
-		 * @hooked woocommerce_upsell_display - 15
-		 * @hooked woocommerce_output_related_products - 20
-		 */
-		do_action( 'woocommerce_after_single_product_summary' );
+	/**
+	 * Hook: woocommerce_after_single_product_summary.
+	 *
+	 * @hooked woocommerce_output_product_data_tabs - 10
+	 * @hooked woocommerce_upsell_display - 15
+	 * @hooked woocommerce_output_related_products - 20
+	 */
+	do_action( 'woocommerce_after_single_product_summary' );
 	?>
 </div>
 
