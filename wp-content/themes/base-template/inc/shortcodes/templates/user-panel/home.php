@@ -15,7 +15,7 @@
 		</li>
 		<li>
 			<b class="title text-muted">تاریخ عضویت:</b>
-			<b><?= parsidate("F Y",strtotime( $user->user_registered ) ) ?></b>
+			<b><?= jdate("d F Y",strtotime( $user->user_registered ) ) ?></b>
 		</li>
 	</ul>
 </div>

@@ -1,5 +1,6 @@
 <?php
 include 'inc/constants.php';
+include 'inc/jdf.php';
 include 'inc/helpers.php';
 include 'inc/autoloader.php';
 include 'inc/ajax-requests/index.php';
