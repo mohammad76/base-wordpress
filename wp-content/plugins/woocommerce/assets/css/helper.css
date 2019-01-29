@@ -610,13 +610,13 @@
   margin-bottom: 30px;
   position: relative; }
 
-.wc-helper .button-primary {
+.wc-helper .button-helper-connect {
   height: 37px;
   line-height: 37px;
   min-width: 124px;
   padding: 0 13px;
   text-shadow: none; }
-  .wc-helper .button-primary:hover, .wc-helper .button-primary:active, .wc-helper .button-primary:focus {
+  .wc-helper .button-helper-connect:hover, .wc-helper .button-helper-connect:active, .wc-helper .button-helper-connect:focus {
     padding: 0 13px; }
 
 .form-toggle__wrapper {

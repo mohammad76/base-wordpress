@@ -87,3 +87,43 @@
   padding: 5px;
   margin-left: 5px;
 }
+.woocommerce-account .woocommerce-MyAccount-navigation {
+  float: right;
+  width: 20%;
+  .woocommerce-MyAccount-navigation-link--customer-logout {
+    background: #CF000F !important;
+    a{
+      color: #fff !important;
+
+    }
+  }
+  .woocommerce-MyAccount-navigation-link {
+    background: #fafcff;
+    padding: 10px;
+    margin-bottom: 6px;
+    border-radius: 5px;
+    border: 1px solid #eee;
+    transition-duration: 0.3s;
+    text-align: center;
+    a{
+      color: #777;
+      display: block;
+    }
+    &:hover{
+      background: $primary_color;
+      a{
+        color: #fff;
+      }
+    }
+  }
+}
+.woocommerce-account .woocommerce-MyAccount-content {
+  float: left;
+  width: 78%;
+  background: #fff;
+  border: 1px solid #eee;
+  padding: 20px;
+  border-radius: 5px;
+  line-height: 30px;
+  color: #555;
+}

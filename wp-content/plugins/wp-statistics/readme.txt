@@ -1,10 +1,10 @@
 === WP Statistics ===
-Contributors: mostafa.s1990, GregRoss, dedidata
+Contributors: mostafa.s1990, mehrshaddarzi, ghasemi71ir, GregRoss, dedidata
 Donate link: https://wp-statistics.com/donate/
 Tags: analytics, wordpress analytics, stats, statistics, visit, visitors, hits, chart, browser, today, yesterday, week, month, year, total, post, page, sidebar, google, live visit, search word, agent, google analytics, webmasters, google webmasters, geoip, location
 Requires at least: 3.0
-Tested up to: 4.9
-Stable tag: 12.4.2
+Tested up to: 5.0
+Stable tag: 12.5.7
 License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -17,9 +17,10 @@ Do you need a simple tool to know your website statistics? Do you need to repres
 All these data are recorded in your server, and YES! WP Statistics is [GDPR compliant](http://bit.ly/2x0AFgT).
 
 = ACT BETTER  BY KNOWING WHAT YOUR USERS ARE LOOKING FOR =
-* Visitor Data Records including IP, Referring Site, Browser, Search Engine, OS, and Country
+* Visitor Data Records including IP, Referring Site, Browser, Search Engine, OS, Country and City
 * Stunning Graphs and Visual Statistics
 * Visitor’s Country Recognition
+* Visitor’s City Recognition
 * The number of Visitors coming from each Search Engine
 * The number of Referrals from each Referring Site
 * Top 10 common browsers; Top 10 countries with most visitors; Top 10 most-visited pages; Top 10 referring sites
@@ -54,9 +55,15 @@ WP Statistics doesn’t officially support the multisite feature; however, it do
 Version 8.8 is the first release that can be installed, upgraded and removed correctly on multi-site. It also has some basic support for the network admin menu. This should not be taken as an indication that WP Statistics fully supports the multisite, but only should be considered as a very first step.
 
 = Does WP Statistics work with caching plugins? =
-Probably not. Most caching plugins don’t execute the standard WordPress loop for a page it has already cached (by design of course) which means the WP Statistics code never runs for that page.
-This means WP Statistics can’t record the page hit or visitor’s information, which is against the purpose of WP Statistics.
-We don’t recommend using a caching plugin with WP Statistics.
+Yes, the cache support added in v12.5.1
+
+If you're using a plugin cache:
+* Don't forget to clear your enabled plugin cache.
+* You should enabled the plugin cache option in the Settings page.
+* Making sure the below endpoint registered in your WordPress.
+http://yourwebsite.com/wp-json/wpstatistics/v1
+
+To register, go to the Permalink page and update the permalink with press Save Changes.
 
 = What’s the difference between Visits and Visitors? =
 Visits is the number of page hits your site has received.
@@ -106,41 +113,88 @@ If IPv6 is not enabled, you may see an warning like:
 10. Theme widget
 
 == Upgrade Notice ==
-= 12.4.0 =
-GDPR compliance, Updated!
-We implement GDPR into the WP-Statistics. for more information read [the blog post](https://wp-statistics.com/2018/08/16/wp-statistics-gdpr).
-Important: with this update, Opt-out feature is removed.
+= 12.5.3 =
+Please consider that after updating, you will probably see some changes in Hits. The reason is that we have better-recognized crawlers and robots to get more accurate statistics for you.
 
 == Changelog ==
-= 12.4.2 =
-* Disabled the welcome page.
+= 12.5.7 =
+* Added: The Edge To Browser List.
+* Added: `date_i18n` function in dates for retrieving localized date.
+* Improved: The Browsers charts.
+* Improved: Minor issues in GeoIP update function.
+* Optimized: All png files. (60% Save).
+
+= 12.5.6 =
+* Fixed: Counting stats issue in Cache mode.
+
+= 12.5.5 =
+* Improved: The WP-Statistics Metaboxes for Gutenberg!
+* Improved: The `params()` method.
+* Improved: Referrers URL to be valid.
+
+= 12.5.4 =
+* Disabled: Notice cache in all admin pages just enabled in the summary and setting of WP-Statistics pages.
+* Improved: Some methods. `params()` and `get_hash_string()`.
+
+= 12.5.3 =
+* Added: Option for enabling/disabling the hits meta box chart in the edit of all post types page and that option is disabled by default.
+* Improved: The responsive problem of Recent Visitors and Latest Search Words widgets in WP Dashboard.
+* Improved: Avoid using jQuery in the inline script to for send request when the cache is enabled.
+* Improved: The GeoIP updater.
+* Improved: The cache process in the plugin.
+* Improved: Get location for Anonymize IP Addresses.
+* Improved: The query in the Author Statistics page.
+
+= 12.5.2 =
+* Improved: Some issues in php v5.4
+
+= 12.5.1 =
+* Added: Cache option for support when the cache enabled in the WordPress.
+* Added: Visitor's city name with GeoIP, you can enable the city name in Settings > Externals > GeoIP City
+* Added: WP-Statistics shortcode in the TinyMCE editor. you can use the shortcode easily in the posts and pages.
+* Added: Qwant search engine in the Search Engine Referrals.
+* Added: Referrers to WP-Statistics shortcode attributes. e.g. `[wpstatistics stat=referrer time=today top=10]`
+* Added: [WhichBrowser](https://whichbrowser.net/) and [CrawlerDetect](https://crawlerdetect.io/). These libraries give us more help in identifying user agents. the Browscap library removed.
+* Improved: The Datepicker in the WP-Statistics pages, supported WordPress custom date format.
+* Improved: The pagination class.
+* Improved: The assets and fixed conflict ChartJS issue, when the Hit Statistics Meta box was enabled in posts/pages.
+* Improved: The responsive summary page.
+* Improved: Exclude Ajax requests, now compatible with [Related Post by Jetpack](https://jetpack.com/support/related-posts/).
+* Improved: Some issues.
+* Updated: Chart.js library to v2.7.3
+* Enabled: Hit Statistics in posts/pages. the conflict problem solved.
+* Disabled: The setting menu when the current user doesn't access.
+* Disabled: Baidu search engine by default after installing.
+
+= 12.4.3 =
+* Disabled: The welcome page and Travod widget.
 
 = 12.4.1 =
-* Implemented the `do_welcome()` function.
-* Updated Libraries to latest version.
-* Added `delete_transient()` for deleting transients when uninstalling the plugin.
+* Implemented: The `do_welcome()` function.
+* Updated: Libraries to latest version.
+* Added: `delete_transient()` for deleting transients when uninstalling the plugin.
 
 = 12.4.0 =
-* Removed The Opt-Out removed.
-* Added Anonymize IP addresses option in the Setting > Privacy.
+* Removed: The Opt-Out removed.
+* Added: Anonymize IP addresses option in the Setting > Privacy.
 
 = 12.3.6.4 =
-* Updated Libraries to latest version.
-* Enabled the suggestion notice in the log pages.
-* Improvement Counting non-changing collections with `count()`. Thanks [Daniel Ruf](https://github.com/DanielRuf)
+* Updated: Libraries to latest version.
+* Enabled: The suggestion notice in the log pages.
+* Improvement: Counting non-changing collections with `count()`. Thanks [Daniel Ruf](https://github.com/DanielRuf)
 
 = 12.3.6.3 =
-* Disabled the suggestion notice.
+* Disabled: The suggestion notice.
 
 = 12.3.6.2 =
-* Tested with PHP v7.2.4
-* Added suggestion notice in the log pages.
-* Added new option for enable/disable notices.
+* Tested: With PHP v7.2.4
+* Added: Suggestion notice in the log pages.
+* Added: New option for enable/disable notices.
 
 = 12.3.6.1 =
-* Improvement i18n strings.
-* Improvement GDPR, Supported for DNT-Header.
-* Improvement GDPR, Added new option for delete visitor data with IP addresses.
+* Improvement: I18n strings.
+* Improvement: GDPR, Supported for DNT-Header.
+* Improvement: GDPR, Added new option for delete visitor data with IP addresses.
 
 = 12.3.6 =
 * Note: GDPR, We Updated Our [Privacy Policy](https://wp-statistics.com/privacy-and-policy/).

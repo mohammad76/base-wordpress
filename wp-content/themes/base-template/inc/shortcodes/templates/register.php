@@ -2,10 +2,10 @@
 if ( is_user_logged_in() ) {
 	?>
 	<script>
-        window.location.replace("<?= home_url( '/' ) ?>");
+        //window.location.replace("<?= home_url( '/' ) ?>");
 	</script>
 	<?php
-	exit();
+	//exit();
 }
 ?>
 <div class="register-box">

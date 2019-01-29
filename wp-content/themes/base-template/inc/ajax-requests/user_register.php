@@ -12,18 +12,17 @@ function user_register() {
 		'password' =>  sanitize_text_field( $_POST['password']),
 		'repassword' =>  sanitize_text_field( $_POST['repassword']),
 	];
-	if ( empty( $data['username'] ) || empty( $data['email'] ) || empty( $data['password'] ) || empty( $data['repassword'] ) ) {
-		$response['message'] = __('Please Complete All Fields.' ,'kaprina');
-		wp_send_json($response);
-	}
+	ajax_validate_input($data['username'] , 'empty' , 'username');
+	ajax_validate_input($data['email'] , 'empty' , 'email');
+	ajax_validate_input($data['password'] , 'empty' , 'password');
+	ajax_validate_input($data['repassword'] , 'empty' , 'repassword');
+
 	if(username_exists($data['username'])){
 		$response['message'] = __('Please Enter Another Username.','kaprina');
 		wp_send_json($response);
 	}
-	if(!filter_var($data['email'] , FILTER_VALIDATE_EMAIL)){
-		$response['message'] = __('Please Enter Valid Email.','kaprina');
-		wp_send_json($response);
-	}
+
+	ajax_validate_input($data['email'] , 'email');
 	if($data['password'] != $data['repassword']){
 		$response['message'] = __('Passwords Not Equal.','kaprina');
 		wp_send_json($response);

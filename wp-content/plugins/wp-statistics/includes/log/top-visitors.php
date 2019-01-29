@@ -21,7 +21,7 @@ include( WP_Statistics::$reg['plugin-dir'] . 'includes/log/widgets/top.visitors.
 
 	$current = 0;
 
-	$statsdate = $WP_Statistics->Current_Date( 'm/d/Y', '-' . $current );
+	$statsdate = $WP_Statistics->Current_Date( get_option("date_format"), '-' . $current );
 
 	if ( array_key_exists( 'statsdate', $_GET ) ) {
 		$statsdate = $_GET['statsdate'];
@@ -32,18 +32,11 @@ include( WP_Statistics::$reg['plugin-dir'] . 'includes/log/widgets/top.visitors.
 	echo ' ' . __( 'Date', 'wp-statistics' ) . ': ';
 
 	echo '<input type="hidden" name="page" value="' . WP_Statistics::$page['top-visitors'] . '">' . "\r\n";
-	echo '<input type="text" size="10" name="statsdate" id="statsdate" value="' .
-	     htmlentities( $statsdate, ENT_QUOTES ) .
-	     '" placeholder="' .
-	     __( 'MM/DD/YYYY', 'wp-statistics' ) .
-	     '"> <input type="submit" value="' .
-	     __( 'Go', 'wp-statistics' ) .
-	     '" class="button-primary">' .
-	     "\r\n";
+	echo '<input type="text" size="10" name="statsdate" id="statsdate" value="' . htmlentities( $statsdate, ENT_QUOTES ) . '" placeholder="' . __( wp_statistics_dateformat_php_to_jqueryui(get_option("date_format")), 'wp-statistics' ) . '"> <input type="submit" value="' . __( 'Go', 'wp-statistics' ) . '" class="button-primary">' . "\r\n";
 
 	echo '</form>' . "\r\n";
 
-	echo '<script>jQuery(function() { jQuery( "#statsdate" ).datepicker(); } );</script>' . "\r\n";
+	echo '<script>jQuery(function() { jQuery( "#statsdate" ).datepicker({dateFormat: \''.wp_statistics_dateformat_php_to_jqueryui(get_option("date_format")).'\'}); } );</script>' . "\r\n";
 
 	?>
     <div class="postbox-container" id="last-log" style="width: 100%;">
