@@ -594,6 +594,10 @@ input, textarea, select {
       background: #00AA88; }
       .woocommerce-account .woocommerce-MyAccount-navigation .woocommerce-MyAccount-navigation-link:hover a {
         color: #fff; }
+    .woocommerce-account .woocommerce-MyAccount-navigation .woocommerce-MyAccount-navigation-link.is-active {
+      background: #00AA88; }
+      .woocommerce-account .woocommerce-MyAccount-navigation .woocommerce-MyAccount-navigation-link.is-active a {
+        color: #fff; }
 
 .woocommerce-account .woocommerce-MyAccount-content {
   float: left;
