@@ -45,6 +45,8 @@ You can read complete documentations on the [woocommerce.ir](http://www.woocomme
 
 == Changelog ==
 = 3.5.2 =
+* update translate bugs and fix states name
+= 3.5.2 =
 * اضافه شدن ابزار رفع مشکل استان و شهر در قسمت ووکامرس فارسی / ابزارها
 * رفع مشکل بروزخطا در صورت وارد کردن کدپستی با اغداد فارسی
 * قابلیت غیر فعال سازی آگهی
@@ -147,7 +149,7 @@ You can read complete documentations on the [woocommerce.ir](http://www.woocomme
 * نسخه اولیه
 
 == Upgrade Notice ==
-= 3.5.2 =
-* رفع مشکل کدپستی فارسی و بروزخطا-ابزار رفع مشکل شهر و استان-قابلیت غیرفعال سازی آگهی
+= 3.5.4 =
+* بهبود ترجمه و رفع مشکل استان ها
 == Traducciones ==
 پشتیبانی در سایت [Woocommerce.ir](http://www.woocommerce.ir) انجام میشود.
