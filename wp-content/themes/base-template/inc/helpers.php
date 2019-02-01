@@ -115,7 +115,7 @@ function ajax_validate_input( $input, $type , $name = 'Field' ) {
 			break;
 		case 'phone':
 			$zero = substr($input, 0, 1);
-			if(!is_numeric($input) || strlen((string) $input) != 11 || $zero !== 0 ){
+			if(!is_numeric($input) || strlen((string) $input) != 11 || $zero != 0 ){
 				$response['message'] = __( 'Phone Number is invalid', 'kaprina' );
 				wp_send_json( $response );
 			}
