@@ -8,11 +8,46 @@ Version: 1.0.0
 Text Domain: kaprina
 */
 @font-face {
-  font-family: 'samim';
-  src: url("assets/fonts/Samim.eot");
-  src: url("assets/fonts/Samim.eot?#iefix") format("embedded-opentype"), url("assets/fonts/Samim.woff2") format("woff2"), url("assets/fonts/Samim.woff") format("woff"), url("assets/fonts/Samim.ttf") format("truetype");
+  font-family: 'vazir';
+  font-style: normal;
+  font-weight: 900;
+  src: url("assets/fonts/Vazir-Black-FD.eot");
+  src: url("assets/fonts/Vazir-Black-FD.eot?#iefix") format("embedded-opentype"), url("assets/fonts/Vazir-Black-FD.woff2") format("woff2"), url("assets/fonts/Vazir-Black-FD.woff") format("woff"), url("assets/fonts/Vazir-Black-FD.ttf") format("truetype"); }
+
+@font-face {
+  font-family: 'vazir';
+  font-style: normal;
+  font-weight: bold;
+  src: url("assets/fonts/Vazir-Bold-FD.eot");
+  src: url("assets/fonts/Vazir-Bold-FD.eot?#iefix") format("embedded-opentype"), url("assets/fonts/Vazir-Bold-FD.woff2") format("woff2"), url("assets/fonts/Vazir-Bold-FD.woff") format("woff"), url("assets/fonts/Vazir-Bold-FD.ttf") format("truetype"); }
+
+@font-face {
+  font-family: 'vazir';
+  font-style: normal;
+  font-weight: 500;
+  src: url("assets/fonts/Vazir-Medium-FD.eot");
+  src: url("assets/fonts/Vazir-Medium-FD.eot?#iefix") format("embedded-opentype"), url("assets/fonts/Vazir-Medium-FD.woff2") format("woff2"), url("assets/fonts/Vazir-Medium-FD.woff") format("woff"), url("assets/fonts/Vazir-Medium-FD.ttf") format("truetype"); }
+
+@font-face {
+  font-family: 'vazir';
+  font-style: normal;
+  font-weight: 300;
+  src: url("assets/fonts/Vazir-Light-FD.eot");
+  src: url("assets/fonts/Vazir-Light-FD.eot?#iefix") format("embedded-opentype"), url("assets/fonts/Vazir-Light-FD.woff2") format("woff2"), url("assets/fonts/Vazir-Light-FD.woff") format("woff"), url("assets/fonts/Vazir-Light-FD.ttf") format("truetype"); }
+
+@font-face {
+  font-family: 'vazir';
+  font-style: normal;
+  font-weight: 200;
+  src: url("assets/fonts/Vazir-Thin-FD.eot");
+  src: url("assets/fonts/Vazir-Thin-FD.eot?#iefix") format("embedded-opentype"), url("assets/fonts/Vazir-Thin-FD.woff2") format("woff2"), url("assets/fonts/Vazir-Thin-FD.woff") format("woff"), url("assets/fonts/Vazir-Thin-FD.ttf") format("truetype"); }
+
+@font-face {
+  font-family: 'vazir';
+  font-style: normal;
   font-weight: normal;
-  font-style: normal; }
+  src: url("assets/fonts/Vazir-FD.eot");
+  src: url("assets/fonts/Vazir-FD.eot?#iefix") format("embedded-opentype"), url("assets/fonts/Vazir-FD.woff2") format("woff2"), url("assets/fonts/Vazir-FD.woff") format("woff"), url("assets/fonts/Vazir-FD.ttf") format("truetype"); }
 
 @font-face {
   font-family: 'shabnam';
@@ -83,7 +118,7 @@ Text Domain: kaprina
 
 body {
   background: #FAFAFA;
-  font-family: "samim";
+  font-family: "vazir";
   font-size: 14px;
   line-height: 1.6em;
   color: #444; }
@@ -102,15 +137,6 @@ a {
 
 nav, ol, ul {
   list-style: none; }
-
-abbr, address, article, aside, audio, b, blockquote, body, canvas, caption, cite, code, dd, del, details, dfn, div, dl, dt, em, fieldset, figcaption, figure, footer, form, h1, h2, h3, h4, h5, h6, header, hgroup, html, i, iframe, img, ins, kbd, label, legend, li, mark, menu, nav, object, ol, p, pre, q, samp, section, small, span, strong, sub, summary, sup, table, tbody, td, tfoot, th, thead, time, tr, ul, var, video {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  outline: 0;
-  font-size: 100%;
-  vertical-align: baseline;
-  background: transparent; }
 
 a.bg-primary:focus, a.bg-primary:hover, button.bg-primary:focus, button.bg-primary:hover {
   background: #00AA88 !important; }

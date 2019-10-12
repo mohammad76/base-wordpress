@@ -7,16 +7,69 @@ Description: kaprina Company is present
 Version: 1.0.0
 Text Domain: kaprina
 */
+
+
 @font-face {
-  font-family: 'samim';
-  src: url('assets/fonts/Samim.eot');
-  src: url('assets/fonts/Samim.eot?#iefix') format('embedded-opentype'),
-  url('assets/fonts/Samim.woff2') format('woff2'),
-  url('assets/fonts/Samim.woff') format('woff'),
-  url('assets/fonts/Samim.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
+	font-family: 'vazir';
+	font-style: normal;
+	font-weight: 900;
+	src: url('assets/fonts/Vazir-Black-FD.eot');
+	src: url('assets/fonts/Vazir-Black-FD.eot?#iefix') format('embedded-opentype'),  /* IE6-8 */
+		 url('assets/fonts/Vazir-Black-FD.woff2') format('woff2'),  /* FF39+,Chrome36+, Opera24+*/
+		 url('assets/fonts/Vazir-Black-FD.woff') format('woff'),  /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+		 url('assets/fonts/Vazir-Black-FD.ttf') format('truetype');
 }
+@font-face {
+	font-family: 'vazir';
+	font-style: normal;
+	font-weight: bold;
+	src: url('assets/fonts/Vazir-Bold-FD.eot');
+	src: url('assets/fonts/Vazir-Bold-FD.eot?#iefix') format('embedded-opentype'),  /* IE6-8 */
+		 url('assets/fonts/Vazir-Bold-FD.woff2') format('woff2'),  /* FF39+,Chrome36+, Opera24+*/
+		 url('assets/fonts/Vazir-Bold-FD.woff') format('woff'),  /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+		 url('assets/fonts/Vazir-Bold-FD.ttf') format('truetype');
+}
+@font-face {
+	font-family: 'vazir';
+	font-style: normal;
+	font-weight: 500;
+	src: url('assets/fonts/Vazir-Medium-FD.eot');
+	src: url('assets/fonts/Vazir-Medium-FD.eot?#iefix') format('embedded-opentype'),  /* IE6-8 */
+		 url('assets/fonts/Vazir-Medium-FD.woff2') format('woff2'),  /* FF39+,Chrome36+, Opera24+*/
+		 url('assets/fonts/Vazir-Medium-FD.woff') format('woff'),  /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+		 url('assets/fonts/Vazir-Medium-FD.ttf') format('truetype');
+}
+@font-face {
+	font-family: 'vazir';
+	font-style: normal;
+	font-weight: 300;
+	src: url('assets/fonts/Vazir-Light-FD.eot');
+	src: url('assets/fonts/Vazir-Light-FD.eot?#iefix') format('embedded-opentype'),  /* IE6-8 */
+		 url('assets/fonts/Vazir-Light-FD.woff2') format('woff2'),  /* FF39+,Chrome36+, Opera24+*/
+		 url('assets/fonts/Vazir-Light-FD.woff') format('woff'),  /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+		 url('assets/fonts/Vazir-Light-FD.ttf') format('truetype');
+}
+@font-face {
+	font-family: 'vazir';
+	font-style: normal;
+	font-weight: 200;
+	src: url('assets/fonts/Vazir-Thin-FD.eot');
+	src: url('assets/fonts/Vazir-Thin-FD.eot?#iefix') format('embedded-opentype'),  /* IE6-8 */
+		 url('assets/fonts/Vazir-Thin-FD.woff2') format('woff2'),  /* FF39+,Chrome36+, Opera24+*/
+		 url('assets/fonts/Vazir-Thin-FD.woff') format('woff'),  /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+		 url('assets/fonts/Vazir-Thin-FD.ttf') format('truetype');
+}
+@font-face {
+	font-family: 'vazir';
+	font-style: normal;
+	font-weight: normal;
+	src: url('assets/fonts/Vazir-FD.eot');
+	src: url('assets/fonts/Vazir-FD.eot?#iefix') format('embedded-opentype'),  /* IE6-8 */
+		 url('assets/fonts/Vazir-FD.woff2') format('woff2'),  /* FF39+,Chrome36+, Opera24+*/
+		 url('assets/fonts/Vazir-FD.woff') format('woff'),  /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+		 url('assets/fonts/Vazir-FD.ttf') format('truetype');
+}
+
 @font-face {
   font-family: 'shabnam';  
   src: url('assets/fonts/Shabnam.eot');
@@ -28,7 +81,7 @@ Text Domain: kaprina
   font-style: normal;
 }
 
-$fontfa : 'samim';
+$fontfa : 'vazir';
 $fonth:'shabnam';
 $primary_color:#00AA88;
 $secondary_color: #2e3e52;

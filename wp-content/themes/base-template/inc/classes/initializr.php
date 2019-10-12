@@ -54,7 +54,7 @@ class initializr {
 	public static function enqueue_style() {
 		wp_enqueue_style( 'bootstrap', THEME_URL . '/assets/css/bootstrap.css' );
 		wp_enqueue_style( 'bootstrap-rtl', THEME_URL . '/assets/css/bootstrap-rtl.css' );
-		wp_enqueue_style( 'font-awesome', THEME_URL . '/assets/css/fontawesome5.css' );
+		wp_enqueue_style( 'font-awesome', THEME_URL . '/assets/css/line-awesome.css' );
 		wp_enqueue_style( 'style', get_stylesheet_uri(), array(), filemtime( get_theme_file_path( '/style.css' ) ) );
 
 		if ( is_front_page() ) {
